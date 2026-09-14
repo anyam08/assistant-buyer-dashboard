@@ -31,10 +31,26 @@ Built with `pandas` for calculations and `Plotly` for charts, runnable in Jupyte
 
 **Run it:**
 ```bash
-pip install jupyter pandas numpy plotly
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Run local:
+```bash
+source venv/bin/activate
 jupyter notebook Assistant_Buyer_Dashboard.ipynb
 ```
-Or open directly in [Google Colab](https://colab.research.google.com/) and upload the notebook + CSV.
+
+Or
+```
+Open in Visual Studio Code as notebook, use venv as kernel
+
+and Run or Restart All
+```
+
+Or 
+open directly in [Google Colab](https://colab.research.google.com/) and upload the notebook + CSV.
 
 ---
 
