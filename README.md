@@ -1,15 +1,8 @@
 # Assistant Buyer Dashboard
 
-A decision-support dashboard for an assistant buyer role, built **two ways** from the same flat dataset — once in **Python (pandas + Plotly)**, once in **Excel (formulas + native charts)** — to show the same analysis through two different toolsets.
+A decision-support dashboard for an assistant buyer role, built **two ways** from the same flat dataset — once in **Python (pandas + matplotlib)**, once in **Excel (formulas + native charts)** — to show the same analysis through two different toolsets.
 
 ![Executive Dashboard](docs/screenshot-dashboard.jpg)
-<!--
-  👆 Add your screenshot here:
-  1. Open Assistant_Buyer_Dashboard.ipynb, run all cells, and screenshot the combined
-     Executive Dashboard card (KPI row + chart grid) near the top of the notebook.
-  2. Save it as docs/screenshot-dashboard.png in this repo.
-  3. That's it — this line will render it automatically.
--->
 
 ## What this project demonstrates
 
@@ -21,12 +14,12 @@ Given a flat retail dataset with **no sales-volume, revenue, or supplier data** 
 
 ## Approach 1: Python Notebook (`Assistant_Buyer_Dashboard.ipynb`)
 
-Built with `pandas` for calculations and `Plotly` for charts, runnable in Jupyter or Google Colab.
+Built with `pandas` for calculations and `matplotlib` for charts, runnable in Jupyter or Google Colab. Every chart renders as a static image embedded directly in the notebook, so it displays correctly when browsing the file on GitHub — no interactive-JS renderer required.
 
 **Techniques showcased:**
 - Data cleaning & tiering — `pandas` quantile-based segmentation (terciles for stock, percentile cutoffs for markdown), explicit handling of missing data (17% of ratings are null and are excluded from rule logic rather than imputed)
 - Rule-based recommendation engine — a vectorized `apply()` function flagging each product 🔥 BUY / 👀 MONITOR / 🛑 HOLD from the tiers above
-- One unified dashboard card — KPI cards and a 6-chart Plotly subplot grid (bar, scatter, donut, table) rendered together as a single HTML block, mirroring a BI-tool look inside a notebook
+- One unified dashboard figure — KPI cards and a 6-chart matplotlib grid (bar, scatter, donut, table) rendered together as a single combined image, mirroring a BI-tool look inside a notebook
 - Chart-by-chart narrative — each visualization is revisited standalone afterward with a written, data-driven "what this tells us" read (e.g. correlation coefficients, not just pictures)
 
 **Run it:**
@@ -76,12 +69,12 @@ The same analysis, rebuilt natively in Excel — no Python, no macros, everythin
 ```
 assistant-buyer-dashboard/
 ├── README.md
-├── Assistant_Buyer_Dashboard.ipynb      # Python / pandas / Plotly version
+├── Assistant_Buyer_Dashboard.ipynb      # Python / pandas / matplotlib version
 ├── Assistant_Buyer_Dashboard.xlsx       # Excel formulas / native charts version
 ├── fashion_boutique_dataset.csv         # source data
 └── docs/
     ├── project-spec.md                  # full project specification
-    └── screenshot-dashboard.jpg         # notebook dashboard screenshot (add your own)
+    └── screenshot-dashboard.jpg         # notebook dashboard screenshot
 ```
 
 ## Buyer recommendation logic (prototype, both versions)
