@@ -19,7 +19,7 @@ Built with `pandas` for calculations and `matplotlib` for charts, runnable in Ju
 **Techniques showcased:**
 - Data cleaning & tiering — `pandas` quantile-based segmentation (terciles for stock, percentile cutoffs for markdown), explicit handling of missing data (17% of ratings are null and are excluded from rule logic rather than imputed)
 - Rule-based recommendation engine — a vectorized `apply()` function flagging each product 🔥 BUY / 👀 MONITOR / 🛑 HOLD from the tiers above
-- One unified dashboard figure — KPI cards and a 6-chart matplotlib grid (bar, scatter, donut, table) rendered together as a single combined image, mirroring a BI-tool look inside a notebook
+- One unified dashboard — printed KPI numbers followed by a plain 6-panel matplotlib grid (bar, scatter, pie, table), all rendered together as a single combined image
 - Chart-by-chart narrative — each visualization is revisited standalone afterward with a written, data-driven "what this tells us" read (e.g. correlation coefficients, not just pictures)
 
 **Run it:**
